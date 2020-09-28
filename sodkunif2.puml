@@ -1,0 +1,17 @@
+@startuml
+start
+:a = [13, 16, 17, 20];
+:b = list(range(1,13));
+:c = [];
+while (d in a) is (อ่านค่า a ยังไม่หมด)
+        while (e in b)is (อ่านค่า b ยังไม่หมด)
+            : f = str(e) + "x" + str(d) + "=" +str(d*e);
+            :c.append(d*e);
+        endwhile (อ่านค่า b หมดแล้ว)
+        :print("สูตรคูณแม่ "+str(d)+" คือ");
+        :print(c);
+        :c=[];
+endwhile (อ่านค่า a หมดแล้ว)
+:จบโปรแกรม;
+end
+@enduml
